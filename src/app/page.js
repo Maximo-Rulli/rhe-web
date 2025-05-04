@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import Link from "next/link";
 
 // Hero Section Component
 const HeroSection = () => (
@@ -27,7 +28,7 @@ const HeroSection = () => (
 
 // About Section Component
 const AboutSection = () => (
-  <section className="py-24 bg-white">
+  <section className="py-24 bg-white mx-10">
     <div className="container mx-auto px-4">
       <h2 className="text-4xl font-bold mb-6 text-center">Quienes somos</h2>
       <div className="border-b-2 border-blue-500 w-24 mx-auto mb-12"></div>
@@ -41,15 +42,16 @@ const AboutSection = () => (
             className="rounded-xl shadow-2xl"
           />
         </div>
-        <div className="text-lg leading-relaxed text-gray-700">
+        <div className="sm:ml-10 text-lg leading-relaxed text-gray-700">
           <p className="hidden sm:inline">
             Somos un equipo de profesionales con más de 20 años de trayectoria en el mercado internacional, que se dedica 
             a la Consultoría Integral, Desarrollo de Nuevos Mercados, y Búsqueda Ejecutiva, brindando diagnósticos de 
             situación claros y herramientas efectivas para lograr el cumplimiento de los objetivos de la compañía.
           </p>
-          <p className="inline sm:hidden">
+          <p className="sm:hidden text-justify">
             Somos un equipo de profesionales con años de trayectoria en el mercado internacional. Nos dedicamos a la
-            Consultoría Integral, brindando herramientas efectivas para lograr el cumplimiento de los objetivos de la compañía.
+            Consultoría Integral en Recursos Humanos, brindando herramientas efectivas para lograr el cumplimiento de 
+            los objetivos de la compañía.
           </p>
         </div>
       </div>
@@ -60,7 +62,7 @@ const AboutSection = () => (
 // Staff Section Component
 const StaffSection = () => {
   const divContainerStyle = "bg-white p-8 rounded-xl w-full max-w-[300px] shadow-lg transform hover:scale-105 transition-transform duration-300"
-  const imgDivStyle = "relative overflow-hidden mb-6 h-64 w-full rounded-md"
+  const imgDivStyle = "relative overflow-hidden h-64 w-full rounded-md"
   const nameStyle = "text-2xl font-bold mb-3 text-center"
 
   return (
@@ -71,12 +73,14 @@ const StaffSection = () => {
       <div className="flex flex-wrap justify-around items-stretch gap-12">
         <div className={divContainerStyle}>
           <div className={imgDivStyle}>
-            <Image
-              src="/imgs/romina.webp"
-              alt="Romina Pellegrino"
-              fill
-              className="object-contain"
-            />
+            <Link href={'https://www.linkedin.com/in/romina-pellegrino-17472166/'}>
+              <Image
+                src="/imgs/romina.webp"
+                alt="Romina Pellegrino"
+                fill
+                className="object-contain"
+              />
+            </Link>
           </div>
           <h3 className={nameStyle}>Romina Pellegrino</h3>
           <div className="text-gray-600 text-center">
@@ -90,12 +94,14 @@ const StaffSection = () => {
         </div>
         <div className={divContainerStyle}>
           <div className={imgDivStyle}>
-            <Image
-              src="/imgs/laura.webp"
-              alt="Laura Pires"
-              fill
-              className="object-contain"
-            />
+            <Link href={'https://www.linkedin.com/in/laura-ines-pires-7045a17/'}>
+              <Image
+                src="/imgs/laura.webp"
+                alt="Laura Pires"
+                fill
+                className="object-contain"
+              />
+            </Link>
           </div>
           <h3 className={nameStyle}>Laura Pires</h3>
           <div className="text-gray-600 text-center">
@@ -109,12 +115,14 @@ const StaffSection = () => {
         </div>
         <div className={divContainerStyle}>
           <div className={imgDivStyle}>
-            <Image
-              src="/imgs/antonio.webp"
-              alt="Antonio Carlos Vaz de Lima"
-              fill
-              className="object-contain"
-            />
+            <Link href={'https://www.linkedin.com/in/animarhcoaching/'}>
+              <Image
+                src="/imgs/antonio.webp"
+                alt="Antonio Carlos Vaz de Lima"
+                fill
+                className="object-contain"
+              />
+            </Link>
           </div>
           <h3 className={nameStyle}>Antonio Carlos Vaz de Lima</h3>
           <div className="text-gray-600 text-center">
@@ -134,7 +142,7 @@ const StaffSection = () => {
 
 // Services Section Component
 const ServicesSection = () => (
-  <section className="py-24 bg-white">
+  <section className="py-24 bg-white mx-10">
     <div className="container mx-auto px-4">
       <h2 className="text-4xl font-bold mb-6 text-center">¿Qué hacemos?</h2>
       <div className="border-b-2 border-blue-500 w-24 mx-auto mb-12"></div>
@@ -145,12 +153,14 @@ const ServicesSection = () => (
             alt="Team Work"
             width={612}
             height={408}
-            className="rounded-xl shadow-2xl"
+            className="rounded-xl shadow-2xl ml-auto"
           />
         </div>
-        <div>
-          <p className="text-lg leading-relaxed text-gray-700">
-            Brindamos soluciones flexibles y customizadas a organizaciones que se encuentran enfocadas en liderar un cambio en la optimización de los procesos internos, maximizando el recurso humano como capital principal del negocio.
+        <div className="sm:ml-10">
+          <p className="text-justify sm:inline text-lg leading-relaxed text-gray-700">
+            Brindamos soluciones flexibles y customizadas a organizaciones que se encuentran enfocadas 
+            en liderar un cambio en la optimización de los procesos internos, maximizando el recurso humano 
+            como capital principal del negocio.
           </p>
         </div>
       </div>
