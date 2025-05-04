@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import Footer from "../components/footer";
+import Header from "../components/header";
 
 // Hero Section Component
 const HeroSection = () => (
@@ -41,15 +41,9 @@ const AboutSection = () => (
             className="rounded-xl shadow-2xl"
           />
         </div>
-        <div className="text-lg leading-relaxed text-gray-700">
-          <p className="hidden sm:inline">
-            Somos un equipo de profesionales con más de 20 años de trayectoria en el mercado internacional, que se dedica 
-            a la Consultoría Integral, Desarrollo de Nuevos Mercados, y Búsqueda Ejecutiva, brindando diagnósticos de 
-            situación claros y herramientas efectivas para lograr el cumplimiento de los objetivos de la compañía.
-          </p>
-          <p className="inline sm:hidden">
-            Somos un equipo de profesionales con años de trayectoria en el mercado internacional. Nos dedicamos a la
-            Consultoría Integral, brindando herramientas efectivas para lograr el cumplimiento de los objetivos de la compañía.
+        <div>
+          <p className="text-lg leading-relaxed text-gray-700">
+            Somos un equipo de profesionales con más de 20 años de trayectoria en el mercado internacional, que se dedica a la Consultoría Integral, Desarrollo de Nuevos Mercados, y Búsqueda Ejecutiva, brindando diagnósticos de situación claros y herramientas efectivas para lograr el cumplimiento de los objetivos de la compañía.
           </p>
         </div>
       </div>
